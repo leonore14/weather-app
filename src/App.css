@@ -1,3 +1,7 @@
+.navbar{
+  margin-right: 4%;
+}
+
 ul{
   list-style: none;
   display: flex;
@@ -5,7 +9,7 @@ ul{
 }
 
 li{
-   margin : 2% 4% 2% 2%;
+   margin : 2% 3% 2% 2%;
 }
 
 a{
@@ -35,7 +39,8 @@ a{
 }
 
 .title{
-  margin-top: 8%;
+  margin-top: 10%;
+  margin-bottom: 2%;
   font-size:5.3vw;
   text-align: center;
 }
@@ -55,11 +60,13 @@ a{
 
 .weeklyTitle{
   margin-left: 5%;
+  font-size: xx-large;
 }
 
 .dayDiv{
   margin: 1%;
   margin-top:5%;
+  margin-bottom: 5%;
   text-align: center;
 }
 
@@ -68,8 +75,7 @@ a{
 }
 
 .contact{
-  margin-top:15%;
-  margin-bottom:15%;
+  margin-top:25vh;
   text-align: center;
 }
 
@@ -77,9 +83,4 @@ a{
   margin-top:15%;
   margin-bottom:15%;
   text-align: center;
-}
-
-.footer{
-  margin-top: 10%;
-  margin-left:5%;
 }

@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Loading from './components/Loading';
 import Error from './components/Error';
 
@@ -76,7 +75,6 @@ class App extends Component {
         <Route exact path='/' render={() => renderData()} />
         <Route path='/contact' component={Contact} />
       </Switch>
-      <Footer />
       </>
     );
   }
