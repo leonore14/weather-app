@@ -1,38 +1,85 @@
-.App {
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li{
+   margin : 2% 4% 2% 2%;
+}
+
+a{
+  text-decoration: none;
+  color:#EC6D4C;
+}
+
+.active{
+  font-weight: bold;
+}
+
+.searchForm{
+  margin-left: 5%;
+}
+
+.inputText{
+  border: solid black 1px;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.inputSubmit{
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: medium;
+}
+
+.title{
+  margin-top: 8%;
+  font-size:5.3vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.currentWeather{
+  margin-top: 8%;
+  margin-bottom:8%;
+  font-size: xx-large;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dayList{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.weeklyTitle{
+  margin-left: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dayDiv{
+  margin: 1%;
+  margin-top:5%;
+  text-align: center;
+}
+
+.weekDate{
+  font-size: bolder;
+}
+
+.contact{
+  margin-top:15%;
+  margin-bottom:15%;
+  text-align: center;
+}
+
+.error{
+  margin-top:15%;
+  margin-bottom:15%;
+  text-align: center;
+}
+
+.footer{
+  margin-top: 10%;
+  margin-left:5%;
 }
