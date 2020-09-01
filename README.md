@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# weather app
 
-## Available Scripts
+1. fetch data on `App.js` from [weather api](https://openweathermap.org/forecast5). *** don't forget to create your API key! ***
 
-In the project directory, you can run:
+2. create a Navbar component
 
-### `yarn start`
+3. create routes for `Home.js` and `Contact.js`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. pass data down as props to `Home.js`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+5. call `Title.js` component on `Home.js` and show the city name.
 
-### `yarn test`
+6. call `CurrentWeather.js` component on `Home.js` and show the current: weather, feels like and humidity.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. create a `Search.js` class component and add a state to it.
 
-### `yarn build`
+8. add a `form` and call a method `handleChange` that will set the text that the user is writing as a new state (this should be done on the input).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+9. on `App.js` create a new method `onSearch` that will receive the `userInput` as an argument. this method will do a new API call with the `userInput` as the city name on the call.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+10. pass `onSearch` to `Search.js`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+11. create a method `handleSubmit` that will be called once the form is submitted, and it will call the prop `onSearch` with the state text as argument.
 
-### `yarn eject`
+12. change `Search.js` to a functional component using ***React Hooks***
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+13. call `Search.js` on `Home.js` instead of `App.js`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+14. create a functional component `DaysList.js` and call it on `Home.js`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+15. add a state to `DaysList.js` that will hold the information of 5 objects of the array of 40 elements of data that we receive as props.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+16. create a method that will help you choose only 1 information of the next 5 upcoming days. These 5 objects should be related to either average weather of the day, or a certain time of each upcoming day.
 
-## Learn More
+tip: use the method `.filter()` and `.includes()`
+tip2: don't forget to re-render our app every time there is a change on the props.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+17. for each element on the array, show the component `Day.js`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+18. `Day.js` should contain the temperature, feels like, humidity and the icon corresponding to the weather
 
-### Code Splitting
+tip: you can use the library [Moment](https://www.npmjs.com/package/react-moment) to format the date
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+19. using the geolocation API, get user's current location and fetch the info (don't forget to check weather API URL for using latitude and longitude).
 
-### Analyzing the Bundle Size
+tip: you may use the fetchData method and just change the fetch URL to the one with latitude and longitude.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+20. create an `Error.js` component that will be shown in case the user denies geolocation.
 
-### Making a Progressive Web App
+tip: on the `getCurrentPosition()` method, you also have access to an ***error*** argument.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+21. create a `Loading.js` component that will be shown while the information is loading from the API, or when the user has not yet allowed geolocation.
 
-### Advanced Configuration
+tip: you can use a library such as [react-spinners](https://www.npmjs.com/package/react-spinners) for premade loading spinners.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+22. on our render from `Home` component, either show `Home.js`, `Loading.js` or `Error.js`
